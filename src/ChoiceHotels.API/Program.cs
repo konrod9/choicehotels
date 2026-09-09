@@ -24,6 +24,16 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
+app.UseCors(builder =>
+{
+    builder.WithOrigins(
+            "https://choicehotels-frontend-561x.vercel.app/",
+            "https://choicehotels-frontend-v2jz.vercel.app/")
+        .AllowCredentials()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+});
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
