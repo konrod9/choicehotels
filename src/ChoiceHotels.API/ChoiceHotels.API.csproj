@@ -7,8 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.1" />
+        <ProjectReference Include="..\ChoiceHotels.Domain\ChoiceHotels.Domain.csproj" />
+        <ProjectReference Include="..\ChoiceHotels.Infrastructure.Postgres\ChoiceHotels.Infrastructure.Postgres.csproj" />
     </ItemGroup>
 
 </Project>
