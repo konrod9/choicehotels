@@ -26,10 +26,7 @@ using (var scope = app.Services.CreateScope())
 
 app.UseCors(builder =>
 {
-    builder.WithOrigins(
-            "https://choicehotels-frontend-561x.vercel.app/",
-            "https://choicehotels-frontend-v2jz.vercel.app/")
-        .AllowCredentials()
+    builder.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod();
 });
